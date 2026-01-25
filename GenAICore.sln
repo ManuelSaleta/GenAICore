@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenAICore", "GenAICore\GenAICore.csproj", "{F0A0AB3E-FF11-4E57-BFAA-B4340078F7D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentService", "AgentService\AgentService.csproj", "{F28FD2B5-9B70-4401-982D-D038520A4EF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAI", "OpenAI\OpenAI.csproj", "{96ACFEBA-01FD-4CC8-AC4C-C0B5C5CEDEAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0A0AB3E-FF11-4E57-BFAA-B4340078F7D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0A0AB3E-FF11-4E57-BFAA-B4340078F7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0A0AB3E-FF11-4E57-BFAA-B4340078F7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0A0AB3E-FF11-4E57-BFAA-B4340078F7D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F28FD2B5-9B70-4401-982D-D038520A4EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28FD2B5-9B70-4401-982D-D038520A4EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28FD2B5-9B70-4401-982D-D038520A4EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28FD2B5-9B70-4401-982D-D038520A4EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96ACFEBA-01FD-4CC8-AC4C-C0B5C5CEDEAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96ACFEBA-01FD-4CC8-AC4C-C0B5C5CEDEAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96ACFEBA-01FD-4CC8-AC4C-C0B5C5CEDEAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96ACFEBA-01FD-4CC8-AC4C-C0B5C5CEDEAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
