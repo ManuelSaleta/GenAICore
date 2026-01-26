@@ -1,3 +1,6 @@
+using GenAILib.Clients;
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -14,8 +17,15 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-
+Environment.SetEnvironmentVariable("OPENAI_API_KEY","");
 
 app.MapGet("/health", () => "Healthy");
+
+app.MapPost("/ask", async ([FromQuery(Name = "prompt")] string prompt) =>
+{
+    using var chatGptClient = new ChatGptClient();
+    
+    return await chatGptClient.ChatAsync(prompt);
+});
 
 app.Run();

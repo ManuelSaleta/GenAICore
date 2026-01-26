@@ -1,8 +1,10 @@
 @GenAICore_HostAddress = http://localhost:5046
 
-GET {{GenAICore_HostAddress}}/weatherforecast/
+POST {{GenAICore_HostAddress}}/ask/
 Accept: application/json
 
 GET {{GenAICore_HostAddress}}/hello/
+
+
 
 ###

@@ -1,0 +1,58 @@
+{
+  "experience": [
+    {
+      "id": 1,
+      "heading": "Senior FullStack Software Engineer",
+      "sub_heading": "Sion Central  06/2024 – Present",
+      "contributions": [
+        "Designed and implemented secure authentication and authorization flows with Auth0, enabling SSO and MFA for financial application customers",
+        "Integrated SendGrid and Twilio for transactional email and SMS workflows for onboarding, alerts, and transaction confirmations",
+        "Built payment and account-management systems with encryption in transit and at rest to meet GDPR and secure high-volume transactions",
+        "Owned infrastructure as code using Terraform; developed reusable modules, managed remote state, and provisioned multi-environment AWS and Kubernetes infrastructure",
+        "Implemented GDPR/PII-compliant logging, RBAC, centralized secrets management, audit logging, CI/CD policy gates, monitoring, and alerting"
+      ]
+    },
+    {
+      "id": 2,
+      "heading": "FullStack Software Engineer",
+      "sub_heading": "Bitstop ATM OPS Inc  06/2021 – 2024",
+      "contributions": [
+        "Led ReactJS code reviews and developed components using hooks, Redux, React Router, React-i18next, and React Spring to improve UX and platform functionality",
+        "Refactored critical e-commerce pricing APIs from Python to C#, deployed with Docker & Kubernetes to achieve 99.95% uptime and reduce developer overhead by 20%",
+        "Integrated cloud-based financial services (BitGO API, Bitcoin Average API) to mitigate security risks and support high-traffic transaction volumes",
+        "Architected and implemented scalable microservices with Docker and Kubernetes to support ATM management, data exports, and API configurations",
+        "Introduced peer code-review and documentation into acceptance criteria, managed two developer teams, and improved automated testing and release quality",
+        "Designed and maintained RabbitMQ-based messaging infrastructure to enable reliable asynchronous processing and reduce HTTP chaining"
+      ]
+    },
+    {
+      "id": 3,
+      "heading": "Software Engineer",
+      "sub_heading": "Amadeus North America  02/2017 – 06/2021",
+      "contributions": [
+        "Created API integrations for OperaPMS, ShijiPMS, HotSOS, and HotSOS Mobile, reducing manual transcription and cutting cleaning task time from 12 to 7 minutes",
+        "Led migration to a web-based client using Angular, C#, SQL, and Azure; owned mobile development using Java, Kotlin, and Objective-C to increase staff visibility and planning",
+        "Refactored legacy .NET Framework applications to .NET Core to improve performance, scalability, and maintainability",
+        "Transitioned architecture from monolithic to microservices to enhance modularity, fault tolerance, and scalability"
+      ]
+    },
+    {
+      "id": 4,
+      "heading": "Software Engineer",
+      "sub_heading": "Assurant IT Solutions  10/2016 – 01/2017",
+      "contributions": [
+        "Organized corporate-sponsored internal hackathons and built web apps to track departmental POC initiatives",
+        "Developed Alexa Skills for interactive payment options and collaborated directly with the VP of Technologies to execute events"
+      ]
+    },
+    {
+      "id": 5,
+      "heading": "Tutor / Instructor",
+      "sub_heading": "FIU STARS Tutoring 02/2015 – 09/2016",
+      "contributions": [
+        "Provided individualized tutoring in Database Management, web development, Programming I–III, Operating Systems, Linux administration, and Application Security",
+        "Improved student pass rates by tailoring study sessions and coursework support to individual learning needs"
+      ]
+    }
+  ]
+}

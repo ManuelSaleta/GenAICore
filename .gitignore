@@ -70,5 +70,4 @@ nunit-*.xml
 .vs/
 
 # User-specific files
-*.rsuser
-*.dotSettings.user
+*.rsus
