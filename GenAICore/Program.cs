@@ -1,4 +1,5 @@
 using GenAILib.Clients;
+using GenAILib.Parsers;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,8 +25,9 @@ app.MapGet("/health", () => "Healthy");
 app.MapPost("/ask", async ([FromQuery(Name = "prompt")] string prompt) =>
 {
     using var chatGptClient = new ChatGptClient();
-    
-    return await chatGptClient.ChatAsync(prompt);
+    using var promptParser = new PromptParser();
+    var parsedPrompt = promptParser.ParsePrompt(prompt);
+    return await chatGptClient.ChatAsync(parsedPrompt);
 });
 
 app.Run();
