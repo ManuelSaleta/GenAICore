@@ -1,3 +1,6 @@
+using GenAICore.ConfigOptions;
+using GenAICore.Controllers;
+using GenAICore.Services;
 using GenAILib.Clients;
 using GenAILib.Parsers;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +11,26 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+// Automatic controller discovery + adds additional services for controllers.
+builder.Services.AddControllers();
+
+// If a service uses an external http client
+builder.Services.AddHttpClient();
+// Add your services
+builder.Services.AddTransient<IAgentService, AgentService>();
+
+// Add your env vars
+builder.Services.AddOptions<AuthOptions>()
+    .Bind(builder.Configuration.GetSection("Auth"))
+    .Validate(opt => !string.IsNullOrWhiteSpace(opt.OpenAIApiKey), "OpenAIApiKey is required") 
+    .ValidateOnStart();
+
+// builder.Services.AddHttpClient<IChatGptClient, ChatGptClient>(client => new ChatGptClient())
+
 var app = builder.Build();
+
+// Map controller endpoints.
+app.MapControllers();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -18,16 +40,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-Environment.SetEnvironmentVariable("OPENAI_API_KEY","");
+
 
 app.MapGet("/health", () => "Healthy");
 
-app.MapPost("/ask", async ([FromQuery(Name = "prompt")] string prompt) =>
-{
-    using var chatGptClient = new ChatGptClient();
-    using var promptParser = new PromptParser();
-    var parsedPrompt = promptParser.ParsePrompt(prompt);
-    return await chatGptClient.ChatAsync(parsedPrompt);
-});
 
 app.Run();
