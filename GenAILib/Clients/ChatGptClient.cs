@@ -9,20 +9,15 @@ public interface IChatGptClient
      * Takes a prompt typeof string.
      * Returns a string answer.
      */
-    public Task<string> ChatAsync(string prompt);
+    public Task<string> ChatWithAsync(string prompt);
 }
 
-public class ChatGptClient() : IChatGptClient, IDisposable
+public class ChatGptClient(string authKey) : IChatGptClient, IDisposable
 {
-    // public IChatGptClient Client { get; } = client;
-    
-    private static readonly string AuthKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY") 
-                                              ?? throw new NullReferenceException("OPENAI_API_KEY");
-
-    private ChatClient? _client = new(model: "gpt-4o", apiKey: AuthKey);
+    private ChatClient? _client = new(model: "gpt-4o", apiKey: authKey);
     
 
-    public async Task<string> ChatAsync(string prompt)
+    public async Task<string> ChatWithAsync(string prompt)
     {
         var  chat = await _client!.CompleteChatAsync(prompt);
 
